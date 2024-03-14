@@ -16,7 +16,7 @@ const upload = multer({ storage: storage });
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  let customers = await customerModel.find({})
+  let customers = await customerModel.find()
   res.render('customer/index', { customers: customers });
 });
 
