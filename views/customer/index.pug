@@ -6,7 +6,6 @@ block content
   table 
     thead 
       tr 
-        th ID
         th Email
         th Fullname
         th Image 
@@ -15,7 +14,6 @@ block content
       if customers != ''
         each item in customers 
           tr 
-            td=item._id
             td=item.email 
             td=item.fullname 
             td

@@ -16,7 +16,7 @@ const upload = multer({ storage: storage });
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  let customers = await customerModel.find()
+  let customers = await customerModel.find({})
   res.render('customer/index', { customers: customers });
 });
 
@@ -38,7 +38,7 @@ router.post('/create', upload.single('image'), async (req, res) => {
 })
 
 router.get('/update/:id', async (req, res) => {
-  const customer = await customerModel.findById(req.params.id)
+  const customer = await customerModel.findById(req.params._id)
   res.render('customer/update', { customer: customer })
 })
 
