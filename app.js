@@ -18,9 +18,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.error("Error connecting to MongoDB Atlas:", err));
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
-});
 
 var app = express();
 
