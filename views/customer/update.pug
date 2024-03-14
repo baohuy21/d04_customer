@@ -3,7 +3,7 @@ extends ../layout
 block content 
   h1 Update Customer 
   form(action=`/customer/update/${customer._id}`, method="post", entype="multipart/form-data") 
-    //- input(type="hidden", name="id",value=customer._id)
+    input(type="hidden", name="id",value=customer._id)
     div 
       label(for="email") Email 
       input#email(name='email',value=customer.email) 
