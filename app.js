@@ -9,10 +9,18 @@ var usersRouter = require('./routes/users');
 var customerRouter = require('./routes/customer');
 
 const mongoose = require("mongoose");
-mongoose.connect(
-  "mongodb+srv://node:2024@win@nodejs.nsv3cuf.mongodb.net/?retryWrites=true&w=majority&appName=nodejs"
-);
-// mongoose.connect('mongodb://127.0.0.1:27017/demo');
+const uri = "mongodb+srv://node:2024@win@nodejs.nsv3cuf.mongodb.net/?retryWrites=true&w=majority&appName=nodejs";
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connected to MongoDB Atlas"))
+  .catch((err) => console.error("Error connecting to MongoDB Atlas:", err));
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  next(createError(404));
+});
 
 var app = express();
 
