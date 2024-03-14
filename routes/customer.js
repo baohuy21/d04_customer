@@ -42,7 +42,7 @@ router.get('/update/:id', async (req, res) => {
   res.render('customer/update', { customer: customer })
 })
 
-router.post('update/:id', upload.single('image'), async (req, res) => {
+router.post('/update/:id', upload.single('image'), async (req, res) => {
   const body = req.body;
   const file = req.file;
   let cust = new customerModel({
