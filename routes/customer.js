@@ -51,7 +51,7 @@ router.post('update/:id', upload.single('image'), async (req, res) => {
     password: body.password,
     image: file.filename
   })
-  await customerModel.findByIdAndUpdate(req.body._id, cust)
+  await customerModel.findByIdAndUpdate(req.body.id, cust)
   res.redirect('/customer');
 })
 module.exports = router;
