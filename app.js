@@ -9,10 +9,10 @@ var usersRouter = require('./routes/users');
 var customerRouter = require('./routes/customer');
 
 const mongoose = require("mongoose");
-// mongoose.connect(
-//   "mongodb+srv://baohuy787:2024@win@nodejs.gwg2aek.mongodb.net/?retryWrites=true&w=majority&appName=nodejs"
-// );
-mongoose.connect('mongodb://127.0.0.1:27017/demo');
+mongoose.connect(
+  "mongodb+srv://node:2024@win@nodejs.nsv3cuf.mongodb.net/?retryWrites=true&w=majority&appName=nodejs"
+);
+// mongoose.connect('mongodb://127.0.0.1:27017/demo');
 
 var app = express();
 
