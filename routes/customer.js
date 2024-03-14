@@ -39,7 +39,7 @@ router.post('/create', upload.single('image'), async (req, res) => {
 
 router.get('/update/:id', async (req, res) => {
   const customer = await customerModel.findById(req.params.id)
-  res.render('customer/update', { customer })
+  res.render('customer/update', { customer: customer })
 })
 
 router.post('update/:id', upload.single('image'), async (req, res) => {
