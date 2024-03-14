@@ -11,7 +11,7 @@ var customerRouter = require('./routes/customer');
 const mongoose = require("mongoose");
 // const uri = "mongodb+srv://node:2024@win@nodejs.nsv3cuf.mongodb.net/?retryWrites=true&w=majority&appName=nodejs";
 mongoose
-  .connect("mongodb+srv://database:Z2w4VbolnzUgKQtM@deploy.linvsla.mongodb.net/")
+  .connect("mongodb+srv://database:Z2w4VbolnzUgKQtM@deploy.linvsla.mongodb.net/?retryWrites=true&w=majority&appName=deploy")
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.error("Error connecting to MongoDB Atlas:", err));
 // catch 404 and forward to error handler
